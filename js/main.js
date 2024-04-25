@@ -377,6 +377,8 @@ $(function () {
     $('.mil-has-children a').on('click', function () {
         $('.mil-has-children ul').removeClass('mil-active');
         $('.mil-has-children a').removeClass('mil-active');
+        $('.mil-menu-btn').toggleClass('mil-active');
+        $('.mil-menu-frame').toggleClass('mil-active');
         $(this).toggleClass('mil-active');
         $(this).next().toggleClass('mil-active');
     });

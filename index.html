@@ -67,7 +67,7 @@
         <div class="mil-menu-frame">
             <!-- frame clone -->
             <div class="mil-frame-top">
-                <a href="home-1.html" class="mil-logo">A.</a>
+                <a href="/" class="mil-logo">GA.</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -80,43 +80,26 @@
 
                             <nav class="mil-main-menu" id="swupMenu">
                                 <ul>
-                                    <li class="mil-has-children mil-active">
-                                        <a href="#.">Homepage</a>
-                                        <ul>
-                                            <li><a href="home-1.html">Landing page</a></li>
-                                            <li><a href="home-2.html">Personal</a></li>
-                                            <li><a href="portfolio-3.html">Portfolio slider</a></li>
-                                        </ul>
+                                    <li class="mil-has-children">
+                                        <a href="#home">Homepage</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Portfolio</a>
-                                        <ul>
-                                            <li><a href="portfolio-1.html">Grid type 1</a></li>
-                                            <li><a href="portfolio-2.html">Grid type 2</a></li>
-                                            <li><a href="portfolio-3.html">Slider</a></li>
-                                        </ul>
+                                        <a href="#about">About</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Services</a>
-                                        <ul>
-                                            <li><a href="services.html">Services List</a></li>
-                                            <li><a href="service.html">Single service</a></li>
-                                        </ul>
+                                        <a href="#services">Services</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Newsletter</a>
-                                        <ul>
-                                            <li><a href="blog.html">Blog List</a></li>
-                                            <li><a href="publication.html">Publication</a></li>
-                                        </ul>
+                                        <a href="#portfolio">Portfolio</a>
                                     </li>
                                     <li class="mil-has-children">
-                                        <a href="#.">Other pages</a>
-                                        <ul>
-                                            <li><a href="team.html">Team</a></li>
-                                            <li><a href="#contact">Contact</a></li>
-                                            <li><a href="404.html">404</a></li>
-                                        </ul>
+                                        <a href="#prices">Prices</a>
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="#reviews">Reviews</a>
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="#contact">Contact</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -194,7 +177,7 @@
         <!-- frame -->
         <div class="mil-frame">
             <div class="mil-frame-top">
-                <a href="home-1.html" class="mil-logo">A.</a>
+                <a href="/" class="mil-logo">GA.</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -215,7 +198,7 @@
             <div id="swupMain" class="mil-main-transition">
 
                 <!-- banner -->
-                <section class="mil-banner mil-dark-bg">
+                <section class="mil-banner mil-dark-bg" id="home">
                     <div class="mi-invert-fix">
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6"></div>
@@ -237,11 +220,11 @@
                                     </div>
                                 </div>
 
-                                <a href="services.html" class="mil-button mil-arrow-place mil-btn-space">
+                                <a href="#services" class="mil-button mil-arrow-place mil-btn-space">
                                     <span>What we do</span>
                                 </a>
 
-                                <a href="portfolio-1.html" class="mil-link mil-muted mil-arrow-place">
+                                <a href="#portfolio" class="mil-link mil-muted mil-arrow-place">
                                     <span>View works</span>
                                 </a>
 
@@ -305,7 +288,7 @@
                 <!-- about end -->
 
                 <!-- services -->
-                <section class="mil-dark-bg">
+                <section class="mil-dark-bg pb-3 pb-md-5" id="services">
                     <div class="mi-invert-fix">
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style="top: 300px; right: -100px"></div>
@@ -334,6 +317,9 @@
                                     <a href="services.html" class="mil-services-button mil-button mil-arrow-place"><span>What we do</span></a>
 
                                 </div>
+                                <p class="mil-link mil-accent mil-arrow-place mil-down-arrow d-flex justify-content-center mt-5">
+                                    <span>Our services</span>
+                                </p>
                             </div>
 
                             <div class="row">
@@ -548,13 +534,17 @@
                 <!-- portfolio end -->
 
                 <!-- prices -->
-                <section class="mil-dark-bg">
+                <section class="mil-dark-bg" id="prices">
                     <div class="mi-invert-fix">
                         <div class="container mil-p-120-120">
                             <div class="mil-center">
                                 <h2 class="mil-muted mil-up mil-mb-30">Reasonable <span class="mil-thin">prices</span> <br>for innovative <span class="mil-thin">solutions</span></h2>
-                                <p class="mil-light-soft mil-up mil-mb-120">At our agency, we have a unique approach to web design and development. <br>We believe in creating in terms of user experience, functionality.</p>
+                                <p class="mil-light-soft mil-up">At our agency, we have a unique approach to web design and development. <br>We believe in creating in terms of user experience, functionality.</p>
                             </div>
+
+                            <p class="mil-link mil-accent mil-arrow-place mil-down-arrow d-flex justify-content-center my-4 my-md-5">
+                                <span>Our services</span>
+                            </p>
 
                             <a href="#contact" class="mil-price-card mil-choose mil-accent-cursor mil-up">
                                 <div class="row align-items-center">
@@ -641,7 +631,7 @@
                 <!-- prices end -->
 
                 <!-- reviews -->
-                <section class="mil-soft-bg">
+                <section class="mil-soft-bg" id="reviews">
                     <div class="container mil-p-120-120">
 
                         <div class="row">
@@ -652,7 +642,7 @@
                             </div>
                         </div>
 
-                        <h2 class="mil-center mil-up mil-mb-60">Customer <span class="mil-thin">Voices:</span> <br>Hear What <span class="mil-thin">They Say!</span></h2>
+                        <h2 class="mil-left mil-up mil-mb-60">Customer <span class="mil-thin">Voices:</span> <br>Hear What <span class="mil-thin">They Say!</span></h2>
 
                         <div class="mil-revi-pagination mil-up mil-mb-60"></div>
 
@@ -742,8 +732,7 @@
                 </div>
 
                 <section id="contact">
-                    <div class="container mil-p-120-90">
-                        <h3 class="mil-center mil-up mil-mb-120">Let's <span class="mil-thin">Talk</span></h3>
+                    <div class="container mil-p-0-120">
                         <form class="row align-items-center">
                             <div class="col-lg-6 mil-up">
                                 <input type="text" placeholder="What's your name">
@@ -793,19 +782,19 @@
                                             <nav class="mil-footer-menu mil-mb-60">
                                                 <ul>
                                                     <li class="mil-up mil-active">
-                                                        <a href="home-1.html">Home</a>
+                                                        <a href="#home">Home</a>
                                                     </li>
                                                     <li class="mil-up">
-                                                        <a href="portfolio-1.html">Portfolio</a>
+                                                        <a href="#portfolio">Portfolio</a>
                                                     </li>
                                                     <li class="mil-up">
-                                                        <a href="services.html">Services</a>
+                                                        <a href="#services">Services</a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a href="#pirces">Prices</a>
                                                     </li>
                                                     <li class="mil-up">
                                                         <a href="#contact">Contact</a>
-                                                    </li>
-                                                    <li class="mil-up">
-                                                        <a href="blog.html">Blog</a>
                                                     </li>
                                                 </ul>
                                             </nav>
