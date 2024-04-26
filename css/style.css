@@ -1695,8 +1695,15 @@ banner
   bottom: calc(100% + 120px);
 }
 
+.relative {
+  position: relative;
+}
+.z-1 {
+  z-index: 1;
+}
+
 .mil-inner-banner .mil-banner-content {
-  padding: 150px 0 0 0;
+  padding: 120px 0 0 0;
 }
 @media screen and (max-width: 1200px) {
   .mil-inner-banner .mil-banner-content {
