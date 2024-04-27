@@ -891,12 +891,21 @@ spaces
   }
 }
 
+footer .mil-p-120-120 {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
 .mil-p-120-120 {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 @media screen and (max-width: 992px) {
   .mil-p-120-120 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  footer .mil-p-120-120 {
     padding-top: 90px;
     padding-bottom: 90px;
   }
@@ -3018,12 +3027,12 @@ blog
 footer
 
 ------------------------------------------- */
-.mil-footer-menu {
+/* .mil-footer-menu {
   margin-bottom: 120px;
-}
+} */
 .mil-footer-menu ul li {
   list-style-type: none;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .mil-footer-menu ul li a {
   display: block;
