@@ -42,6 +42,10 @@ form.addEventListener('submit', (e) => {
                 button.textContent = 'Send message';
             }, 3000);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            console.log(err);
+            button.textContent = 'Error: Refresing the page';
+            window.location.reload(true);
+        });
     }
 })
