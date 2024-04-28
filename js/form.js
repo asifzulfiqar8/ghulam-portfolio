@@ -7,6 +7,9 @@ form.addEventListener('submit', (e) => {
     const name = document.querySelector('#name').value;
     const email = document.querySelector('#email').value;
     const message = document.querySelector('#project').value;
+    const button = document.querySelector('#submit span');
+    const loader = document.querySelector('.loader');
+    const svgArrow = document.querySelector('#submit .mil-arrow');
 
     if(!name || !email || !message) {
         alert('Please fill the required fields first');
@@ -16,6 +19,10 @@ form.addEventListener('submit', (e) => {
             email: document.querySelector('#email').value,
             message: document.querySelector('#project').value
         }
+
+        button.textContent = 'Sending'; 
+        svgArrow.style.display = 'none';
+        loader.style.display = 'block'
 
         const serviceID = "service_tszjc27";
         const templateID = "template_li06rwr";
@@ -28,7 +35,9 @@ form.addEventListener('submit', (e) => {
             document.querySelector('#project').value = '';
             console.log(res);
             console.log(params);
-            alert('Your message sent successfully');
+            button.textContent = 'Send message'; 
+            svgArrow.style.display = 'block';
+            loader.style.display = 'none';
         })
         .catch((err) => console.log(err));
     }
