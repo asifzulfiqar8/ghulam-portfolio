@@ -35,9 +35,12 @@ form.addEventListener('submit', (e) => {
             document.querySelector('#project').value = '';
             console.log(res);
             console.log(params);
-            button.textContent = 'Send message'; 
+            button.textContent = 'Sent Successfully';
             svgArrow.style.display = 'block';
             loader.style.display = 'none';
+            setTimeout(() => {
+                button.textContent = 'Send message';
+            }, 3000);
         })
         .catch((err) => console.log(err));
     }
