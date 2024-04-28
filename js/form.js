@@ -45,6 +45,8 @@ form.addEventListener('submit', (e) => {
         .catch((err) => {
             console.log(err);
             button.textContent = 'Error: Refresing the page';
+            svgArrow.style.display = 'block';
+            loader.style.display = 'none';
             setTimeout(() => {
                 window.location.reload(true);
             }, 2000);
