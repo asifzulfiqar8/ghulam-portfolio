@@ -45,7 +45,9 @@ form.addEventListener('submit', (e) => {
         .catch((err) => {
             console.log(err);
             button.textContent = 'Error: Refresing the page';
-            window.location.reload(true);
+            setTimeout(() => {
+                window.location.reload(true);
+            }, 2000);
         });
     }
 })
