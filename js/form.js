@@ -53,3 +53,16 @@ form.addEventListener('submit', (e) => {
         });
     }
 })
+
+
+// link redirection forcefully
+const links = document.querySelectorAll('.redirect-link');
+console.log('links', links);
+ 
+links.forEach((link) => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = this.href;
+        console.log('href', this.href);
+    })
+})
