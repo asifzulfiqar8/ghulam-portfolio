@@ -62,7 +62,8 @@ console.log('links', links);
 links.forEach((link) => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
+        window.location.href = '';
         window.location.href = this.href;
         console.log('href', this.href);
     })
-})
+});
