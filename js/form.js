@@ -57,13 +57,38 @@ form.addEventListener('submit', (e) => {
 
 // link redirection forcefully
 const links = document.querySelectorAll('.redirect-link');
-console.log('links', links);
- 
-links.forEach((link) => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.location.href = '';
-        window.location.href = this.href;
-        console.log('href', this.href);
+const website = 'https://ghulamabbasbaig.com/'
+const behance = 'https://www.behance.net/ghulamabbasbaig/'
+const instagram = 'https://www.instagram.com/ghulamabasbaig/'
+const linkedin = 'https://www.linkedin.com/in/ghulamabbasbaig/'
+const wa = 'https://wa.me/+923087072145'
+
+links.forEach(function(link) {
+    link.addEventListener("click", () => {
+
+        switch(true) {
+            case link.classList.contains('behance'):
+                window.location.href = behance;
+                break;
+            case link.classList.contains('instagram'):
+                window.location.href = instagram;
+                break;
+            case link.classList.contains('website'):
+                window.location.href = website;
+                break;
+            case link.classList.contains('linkedin'):
+                window.location.href = linkedin;
+                break;
+            case link.classList.contains('wa'):
+                window.location.href = wa;
+                break;
+            default:
+                console.log('default state');
+        }
     })
 });
+
+links.forEach((link) => {
+    link.href = '';
+})
+
