@@ -62,26 +62,54 @@ const behance = 'https://www.behance.net/ghulamabbasbaig/'
 const instagram = 'https://www.instagram.com/ghulamabasbaig/'
 const linkedin = 'https://www.linkedin.com/in/ghulamabbasbaig/'
 const wa = 'https://wa.me/+923087072145'
+const project1 = 'https://www.behance.net/gallery/194599449/Pet-Health-Care-Website-Landing-Page-Design'
+const project2 = 'https://www.behance.net/gallery/95927701/Luxury-Beach-Resort-Landing-Page-Website-Ui-Ux-Design'
+const project3 = 'https://www.behance.net/gallery/124157415/Influencer-Creative-Marketing-Agency-Landing-Page'
+const project4 = 'https://www.behance.net/gallery/169585929/Story-Maker-Reels-App-UIUX-Design-Concept'
+const project5 = 'https://www.behance.net/gallery/194912767/Grocery-Store-Website-Design-UI-UX-Design'
+const project6 = 'https://www.behance.net/gallery/191900593/Fishing-Mobile-App-UI-UX-Case-Study'
+
 
 links.forEach(function(link) {
     link.addEventListener("click", () => {
 
         switch(true) {
-            case link.classList.contains('behance'):
-                window.location.href = behance;
+			
+			case link.classList.contains('behance'):
+                window.open(behance, '_blank');
                 break;
             case link.classList.contains('instagram'):
-                window.location.href = instagram;
-                break;
-            case link.classList.contains('website'):
-                window.location.href = website;
+                window.open(instagram, '_blank');
                 break;
             case link.classList.contains('linkedin'):
-                window.location.href = linkedin;
+                window.open(linkedin, '_blank');
                 break;
             case link.classList.contains('wa'):
-                window.location.href = wa;
-                break;
+                window.open(wa, '_blank');
+                break;     
+            case link.classList.contains('website'):
+                window.location.href = website;
+                break;  
+            case link.classList.contains('project1'):
+                window.open(project1 , '_blank');
+                break;		
+            case link.classList.contains('project2'):
+                window.open(project2 , '_blank');
+                break;	
+            case link.classList.contains('project3'):
+                window.open(project3 , '_blank');
+                break;	
+            case link.classList.contains('project4'):
+                window.open(project4 , '_blank');
+                break;	
+            case link.classList.contains('project5'):
+                window.open(project5 , '_blank');
+                break;	
+			case link.classList.contains('project6'):
+                window.open(project6 , '_blank');
+                break;	
+				
+								
             default:
                 console.log('default state');
         }
