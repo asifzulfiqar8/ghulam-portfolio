@@ -72,7 +72,7 @@ links.forEach(function (link) {
   link.addEventListener("click", () => {
     switch (true) {
       case link.classList.contains("behance"):
-        window.open(behance, "_blank");
+        window.open(behance, "_self");
         break;
       case link.classList.contains("instagram"):
         window.open(instagram, "_blank");
@@ -87,25 +87,25 @@ links.forEach(function (link) {
         window.location.href = website;
         break;
       case link.classList.contains("project1"):
-        window.open(project1, "_blank");
+        window.open(project1, "_self");
         break;
       case link.classList.contains("project2"):
-        window.open(project2, "_blank");
+        window.open(project2, "_self");
         break;
       case link.classList.contains("project3"):
-        window.open(project3, "_blank");
+        window.open(project3, "_self");
         break;
       case link.classList.contains("project4"):
-        window.open(project4, "_blank");
+        window.open(project4, "_self");
         break;
       case link.classList.contains("project5"):
-        window.open(project5, "_blank");
+        window.open(project5, "_self");
         break;
       case link.classList.contains("project6"):
-        window.open(project6, "_blank");
+        window.open(project6, "_self");
         break;
       case link.classList.contains("upwork"):
-        window.open(upwork, "_blank");
+        window.open(upwork, "_self");
         break;
 
       default:
