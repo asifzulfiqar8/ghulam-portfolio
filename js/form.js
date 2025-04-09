@@ -1,57 +1,61 @@
 const form = document.querySelector("#form");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+if (!form) {
+  console.log("no form found");
+} else {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  const name = document.querySelector("#name").value;
-  const email = document.querySelector("#email").value;
-  const message = document.querySelector("#project").value;
-  const button = document.querySelector("#submit span");
-  const loader = document.querySelector(".loader");
-  const svgArrow = document.querySelector("#submit .mil-arrow");
+    const name = document.querySelector("#name").value;
+    const email = document.querySelector("#email").value;
+    const message = document.querySelector("#project").value;
+    const button = document.querySelector("#submit span");
+    const loader = document.querySelector(".loader");
+    const svgArrow = document.querySelector("#submit .mil-arrow");
 
-  if (!name || !email || !message) {
-    alert("Please fill the required fields first");
-  } else {
-    const params = {
-      name: document.querySelector("#name").value,
-      email: document.querySelector("#email").value,
-      message: document.querySelector("#project").value,
-    };
+    if (!name || !email || !message) {
+      alert("Please fill the required fields first");
+    } else {
+      const params = {
+        name: document.querySelector("#name").value,
+        email: document.querySelector("#email").value,
+        message: document.querySelector("#project").value,
+      };
 
-    button.textContent = "Sending";
-    svgArrow.style.display = "none";
-    loader.style.display = "block";
+      button.textContent = "Sending";
+      svgArrow.style.display = "none";
+      loader.style.display = "block";
 
-    const serviceID = "service_tszjc27";
-    const templateID = "template_li06rwr";
+      const serviceID = "service_tszjc27";
+      const templateID = "template_li06rwr";
 
-    emailjs
-      .send(serviceID, templateID, params)
-      .then((res) => {
-        document.querySelector("#name").value = "";
-        document.querySelector("#email").value = "";
-        document.querySelector("#project").value = "";
-        console.log(res);
-        console.log(params);
-        button.textContent = "Sent Successfully";
-        svgArrow.style.display = "block";
-        loader.style.display = "none";
-        setTimeout(() => {
-          button.textContent = "Send message";
-        }, 3000);
-      })
-      .catch((err) => {
-        console.log(err);
-        button.textContent = "Error: Refresing the page";
-        svgArrow.style.display = "block";
-        loader.style.display = "none";
-        setTimeout(() => {
-          window.location.reload(true);
-        }, 2000);
-      });
-  }
-});
+      emailjs
+        .send(serviceID, templateID, params)
+        .then((res) => {
+          document.querySelector("#name").value = "";
+          document.querySelector("#email").value = "";
+          document.querySelector("#project").value = "";
+          console.log(res);
+          console.log(params);
+          button.textContent = "Sent Successfully";
+          svgArrow.style.display = "block";
+          loader.style.display = "none";
+          setTimeout(() => {
+            button.textContent = "Send message";
+          }, 3000);
+        })
+        .catch((err) => {
+          console.log(err);
+          button.textContent = "Error: Refresing the page";
+          svgArrow.style.display = "block";
+          loader.style.display = "none";
+          setTimeout(() => {
+            window.location.reload(true);
+          }, 2000);
+        });
+    }
+  });
+}
 
 // link redirection forcefully
 const links = document.querySelectorAll(".redirect-link");
@@ -67,6 +71,8 @@ const project4 = "project-details-3.html";
 const project5 = "project-details-4.html";
 const project6 = "project-details-5.html";
 const upwork = "https://www.upwork.com/freelancers/~0182e41e18adc055cf";
+const petFigmaLink =
+  "https://www.figma.com/design/llLKzuv4ggbWMNUQ9YgxUr/Luscious-Cosmetics?node-id=91-7551&t=Q6qG4QQGdKZj34Er-1";
 
 links.forEach(function (link) {
   link.addEventListener("click", () => {
@@ -106,6 +112,10 @@ links.forEach(function (link) {
         break;
       case link.classList.contains("upwork"):
         window.open(upwork, "_self");
+        break;
+      case link.classList.contains("petFigmaLink"):
+        window.open(petFigmaLink, "_self");
+        console.log("clicked", click, petFigmaLink);
         break;
 
       default:
