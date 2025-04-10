@@ -506,6 +506,44 @@
     <script src="js/main.js"></script>
     <script src="js/form.js"></script>
 
+    <script>
+        // Smooth scroll function using GSAP
+    function smoothScroll(target, duration) {
+        gsap.to(window, {
+            scrollTo: {
+                y: target,
+                offsetY: 100 // Adjust the offset as needed (to account for fixed header, etc.)
+            },
+            duration: duration / 1000, // Convert duration to seconds
+            ease: "power2.out" // Adjust the easing as needed
+        });
+    }
+
+    // Smooth scroll event listeners
+    document.querySelectorAll('.mil-main-menu a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = this.getAttribute('href');
+            var targetSection = document.querySelector(target);
+            if (targetSection) {
+                var targetPosition = targetSection.offsetTop;
+                smoothScroll(targetPosition, 3000); // Adjust the duration as needed
+            }
+        });
+    });
+    // Smooth scroll event listeners
+    document.querySelectorAll('.mil-footer-menu a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = this.getAttribute('href');
+            var targetSection = document.querySelector(target);
+            if (targetSection) {
+                var targetPosition = targetSection.offsetTop;
+                smoothScroll(targetPosition, 3000); // Adjust the duration as needed
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>
