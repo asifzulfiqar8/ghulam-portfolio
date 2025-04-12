@@ -1723,7 +1723,7 @@ banner
 }
 
 .mil-inner-banner .mil-banner-content {
-  padding: 120px 0 0 0;
+  padding: 80px 0 0 0;
 }
 @media screen and (max-width: 1200px) {
   .mil-inner-banner .mil-banner-content {
@@ -3046,12 +3046,22 @@ footer
   /* margin-bottom: 30px; */
 }
 .mil-footer-menu ul li a {
-  display: block;
+	
+	
+	color: rgba(255, 255, 255, 0.6);
+    list-style-type: none;
+    padding: 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 12px;
+	
+ /* display: block;
   font-weight: 500;
   font-size: 28px;
   color: rgba(255, 255, 255, 0.9);
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
-  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1); */
 }
 .mil-footer-menu ul li a:hover {
   -webkit-transform: translateX(10px);
